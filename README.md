@@ -13,10 +13,9 @@ This project explores how design choices shape what a reader concludes from data
 
 | Name | UCSD Email |
 | --- | --- |
-| *Member 1* | *email@ucsd.edu* |
-| *Member 2* | *email@ucsd.edu* |
-| *Member 3* | *email@ucsd.edu* |
-| *Member 4 (optional)* | *email@ucsd.edu* |
+| *Thomas Cung* | *tdcung@ucsd.edu* |
+| *Andrew Hoang* | *fatchud@ucsd.edu* |
+| *Xuan (last name)* | *email@ucsd.edu* |
 
 ## Dataset
 
@@ -49,6 +48,9 @@ For each visualization, the report lists 3-5 central design decisions, each scor
 ├── notebooks/        # Exploratory analysis and plotting code
 └── README.md
 ```
+
+## don't touch anything below this
+## --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Running Locally
 
