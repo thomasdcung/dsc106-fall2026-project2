@@ -14,13 +14,13 @@ This project explores how design choices shape what a reader concludes from data
 | Name | UCSD Email |
 | --- | --- |
 | *Thomas Cung* | *tdcung@ucsd.edu* |
-| *Andrew Hoang* | *fatchud@ucsd.edu* |
-| *Xuan (last name)* | *email@ucsd.edu* |
+| *Andrew Hoang* | *anh094@ucsd.edu* |
+| *Xuan Yin* | *x9yin@ucsd.edu* |
 
 ## Dataset
 
-- **Dataset:** *name of the dataset we chose*
-- **Source:** *link to the dataset*
+- **Dataset:** *World Bank Data by Indicators 1960-2020*
+- **Source:** *[link to the dataset](https://github.com/light-and-salt/World-Bank-Data-by-Indicators)*
 
 ## Proposition
 
