@@ -1,0 +1,41 @@
+# Data files
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.xlsx
+*.xls
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.zip
+*.tar.gz
+*.gz
+
+# Specific data file in this repo
+dsc106_project2_dataset.csv
+
+# Data directories (if any are created)
+data/
+datasets/
+raw_data/
+processed_data/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+ENV/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
