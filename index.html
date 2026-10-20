@@ -152,22 +152,31 @@
         </header>
 
         <main>
-            <h2>Proposition: [STATE PROPOSITION]</h2>
+            <h2>Proposition: At the NYPD, serious misconduct findings don't hurt an officer's career: the harsher the substantiated finding, the more likely the officer was promoted.</h2>
 
             <section>
                 <h3>FOR the Proposition</h3>
 
                 <figure>
-                    <img src="IMAGE_FILENAME" alt="" />
+                    <img src="viz3_proposition_true.png" alt="" />
                     <figcaption>BRIEF CAPTION HERE.</figcaption>
                 </figure>
 
                 <p>Design Decisions and Rationale:</p>
 
                 <ul>
-                    <li>RATIONALE_1</li>
-                    <li>RATIONALE_2</li>
-                    <li>RATIONALE_3</li>
+                    <li>Grouping officers by their most serious outcome (score: -0.5)
+Each officer is placed by the harshest finding on their record, so someone with five “instructions” findings and one “charges” finding counts only as “charges.” This turns the question from how often an officer was disciplined into how badly, which makes the link to promotion sound more troubling. It's a defensible way to summarize a record, but we picked it because it gave the clearest climb. We considered summing severity points, but a single “worst outcome” was easier to explain on the chart.
+</li>
+                    <li>Dashed baseline averaging the two mildest groups (score: -1)
+Combining instructions (34%) and training (30%) into one 32% line creates a low reference point that makes the charges bar look like a huge jump. It also hides that the trend isn't steady, and that training is actually lower than instructions. We explain what the line means in the top left, which keeps it from being a flat out trick, but we merged those two groups to sharpen the contrast.
+</li>
+                    <li>“2.1x the rate” label inside the charges bar (score: -0.5)
+A ratio reads as more dramatic than the 33-point difference, and placing it in white text inside the darkest bar makes it the first thing readers see. The number is accurate (65% ÷ 32% ≈ 2.06), but it compares against our own constructed baseline rather than any single real group. Against instructions alone, it would only be 1.9x.
+</li>
+                    <li>Sample sizes and a “how to read” note (score: +2)
+Each bar shows its n, and the footnote walks through one calculation (1,139 of 1,748 = 65%). Here the largest group is also the most damning one, so showing the sizes actually strengthens the argument: 65% is the most reliable number on the chart. This is a deliberate change from our first chart, where hiding n covered up a small group.
+</li>
                 </ul>
             </section>
 
@@ -175,16 +184,22 @@
                 <h3>AGAINST the Proposition</h3>
 
                 <figure>
-                    <img src="IMAGE_FILENAME" alt="" />
+                    <img src="viz4_proposition_false.png" alt="" />
                     <figcaption>BRIEF CAPTION HERE.</figcaption>
                 </figure>
 
                 <p>Design Decisions and Rationale:</p>
 
                 <ul>
-                    <li>RATIONALE_1</li>
-                    <li>RATIONALE_2</li>
-                    <li>RATIONALE_3</li>
+                    <li>Using years since first complaint as a stand-in for time on the force (score: -0.5)
+The dataset has no hire date, so we used 2020 minus the year of the officer's first complaint. It is a weak proxy, because an officer who joined years earlier but got a first complaint late shows a shorter career than they have. It is also partly built in: an officer needs time to accumulate several allegations, so the bars are expected to rise. We labeled the axis “years since the officer’s first complaint” and said in the footnote that it isn’t a hire date. Even so, the chart could suggest more independence between complaints and tenure than the data supports.
+</li>
+                    <li>Reusing the same allegation groups as Visualization 1 (score: +1)
+Using the same x-axis (1, 2, 3, 4-5, 6+) lets a reader line up the two charts and see that the groups with higher promotion rates are also the groups with longer histories. It works as a direct rebuttal to the first chart, and it is transparent about it. The cost is that it inherits the allegation-based groups and uneven bins we criticized earlier, and counting allegations instead of complaints makes the high groups look more extreme.
+</li>
+                    <li>A subtitle that links complaint history to promotion (score: -1)
+The title says officers with more allegations have longer complaint histories, which the chart shows. The subtitle adds that they therefore “had more time to be promoted,” which the chart doesn’t show, since it has no promotion data. The causal chain (more time, more complaints, more promotion) is asserted, not demonstrated, and it leans on the reader accepting Visualization 3 as the support. We kept the claim because it is plausible and explains why the chart is on the “false” side, but it is the least supported sentence on the page.
+</li>
                 </ul>
             </section>
 
