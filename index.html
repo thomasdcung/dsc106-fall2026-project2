@@ -160,8 +160,10 @@
                 <h3>FOR the Proposition</h3>
 
                 <figure>
-                    <img src="viz3_proposition_true.png" alt="" />
-                    <figcaption>BRIEF CAPTION HERE.</figcaption>
+                    <img src="viz3_proposition_true.png" alt="Bar chart of the share of officers promoted by most serious substantiated outcome: 34% for instructions, 30% for formalized training, 47% for command discipline and 65% for formal charges." />
+                    <figcaption>How to read: each bar = officers promoted / officers in that group (formal charges: 1,139 of 1,748 = 65%).
+                                <br>Promoted = current rank is above rank at first complaint, including a move to Detective. Instructions also includes command-level instructions and no-recommendation findings.
+                                <br>Source: NYPD CCRB allegations, through July 2020 (n = 3,996 officers).</figcaption>
                 </figure>
 
                 <p>Design Decisions and Rationale:</p>
@@ -178,15 +180,17 @@
                 <h3>AGAINST the Proposition</h3>
 
                 <figure>
-                    <img src="viz4_proposition_false.png" alt="" />
-                    <figcaption>BRIEF CAPTION HERE.</figcaption>
+                    <img src="viz4_proposition_false.png" alt="Horizontal bar chart of average years since first complaint by number of substantiated allegations: 10.6 years for one allegation, rising to 14.2 years for six or more." />
+                    <figcaption>How to read: each bar = the average of (2020 minus the year of the officer's first complaint) for officers in that group.
+                                <br>Not a hire date: officers have a current rank in the July 2020 export, so this is a lower bound on time on the force.
+                                <br>Source: NYPD CCRB allegations, through July 2020 (n = 3,996 officers).</figcaption>
                 </figure>
 
                 <p>Design Decisions and Rationale:</p>
 
                 <ul>
                     <li>Using years since first complaint as a stand-in for time on the force (score: -0.5)<br>The dataset has no hire date, so we used 2020 minus the year of the officer's first complaint. It is a weak proxy, because an officer who joined years earlier but got a first complaint late shows a shorter career than they have. It is also partly built in: an officer needs time to accumulate several allegations, so the bars are expected to rise. We labeled the axis “years since the officer's first complaint” and said in the footnote that it isn't a hire date. Even so, the chart could suggest more independence between complaints and tenure than the data supports.</li>
-                    <li>Reusing the same allegation groups as Visualization 1 (score: +1)<br>Using the same x-axis (1, 2, 3, 4-5, 6+) lets a reader line up the two charts and see that the groups with higher promotion rates are also the groups with longer histories. It works as a direct rebuttal to the first chart, and it is transparent about it. The cost is that it inherits the allegation-based groups and uneven bins we criticized earlier, and counting allegations instead of complaints makes the high groups look more extreme.</li>
+                    <li>Grouping by number of allegations instead of severity (score: -1)<br>Visualization 4 groups officers by how many substantiated allegations they have, while Visualization 3 groups them by their most serious outcome, so the two charts do not share an axis. We chose allegation count because it produces a smooth staircase (10.6 to 14.2 years). Grouping by severity gives a messier pattern (about 8.8, 6.6, 10.1 and 14.2 years), where formalized training dips below instructions. The cost is that readers must assume that more allegations goes with more severe findings, and counting allegations instead of complaints stretches the high groups, since one incident can produce several allegations. We considered severity groups to match Visualization 3 but kept the cleaner chart.</li>
                     <li>A subtitle that links complaint history to promotion (score: -1)<br>The title says officers with more allegations have longer complaint histories, which the chart shows. The subtitle adds that they therefore “had more time to be promoted,” which the chart doesn't show, since it has no promotion data. The causal chain (more time, more complaints, more promotion) is asserted, not demonstrated, and it leans on the reader accepting Visualization 3 as the support. We kept the claim because it is plausible and explains why the chart is on the “false” side, but it is the least supported sentence on the page.</li>
                 </ul>
             </section>
@@ -194,7 +198,12 @@
             <section>
                 <h2>Final Reflection</h2>
 
-                <p>The mechanical part was straightforward. Once the officer table existed, each chart took only a few lines of code. The hard part was deciding what the data could actually support. Our first chart was the easiest to make persuasive, and its strongest effects were invisible on the page. We counted a move to Detective as a promotion, used allegations instead of complaints, and ignored time on the force. The honest version was harder because once we accounted for the era, the result was weaker than the headline we wanted. What surprised us most was that data transformations moved the story far more than visual tricks. A truncated axis is easy to spot, but swapping complaints for allegations changed the within era gap from two points to nine while the chart looked completely normal. Since every officer in our dataset had at least one complaint and pre 2020 departures were missing, we were only ever comparing officers with some complaints to those with more.<br>We define ethical visualization as being honest about what the data can and cannot show, even when trying to persuade. The line we draw is whether a thoughtful reader who learned how the chart was made would feel misled. Framing and choosing which comparison to show are acceptable when the numbers are accurate and the title does not claim too much. Choices become misleading when they hide something that would change the reader's conclusion, like group sizes, a key confounder, or a definition that shifts the result by twenty points. Almost any choice can be defended on its own, so what separates honest framing from manipulation is whether we picked a method because it was accurate or because it gave us the result we wanted. These are real officers and real complaints, which is all the more reason not to stretch the claims.</p>
+                <p>Building these two charts showed us that the hard part of persuasive visualization is not the code but deciding what to leave out. The mechanics were straightforward: group each officer by their worst substantiated outcome, count promotions, and draw bars. The difficult part was that the data can honestly tell both stories. The officers with the most serious findings really are promoted at the highest rate (65%), and those same officers also have much longer complaint histories, so the “for” chart is carried largely by career length. We were surprised how little deception the “for” chart needed. Every number is accurate, and the persuasion comes from choices that look innocent: a pooled baseline, a ratio label, a title that states a rule, and no mention of tenure inside the chart itself. The “against” chart ended up being the more honest one, because it works by adding context instead of removing it.</p>
+ 
+                <p>We now define ethical analysis as making sure a reader ends up believing what the data would show if they saw everything relevant to the question. A persuasive choice is acceptable when the numbers are accurate, the scope is stated (officers with at least one substantiated allegation, not “the NYPD”), the denominators are visible, and the claim stays inside what the data can support. A choice becomes misleading when it asks the reader to infer something the data does not show, such as treating a correlation as a cause, or when it hides the one thing that would change their conclusion. In our case that was tenure, and our “for” chart's title does exactly this. The bounds are fuzzy at the edges, since emphasis, framing and choice of baseline are unavoidable, so we judge a choice by whether a reader who learned about it afterward would feel misled.</p>
+ 
+                <p>If we did this again, we would let the caveat live in the same chart as the claim. Putting the tenure explanation in a separate “against” figure made the “for” chart more persuasive and less honest on its own, which is the trade-off this assignment is built to expose. The scores we gave ourselves reflect that: our most deceptive decisions (-1) were framing and grouping choices that make accurate numbers look cleaner or more dramatic than they are, and our most earnest one was showing sample sizes and defining every term in the caption.</p>
+            
             </section>
         </main>
     <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"c822b88e119346678db149ed7b7721c9","r":1,"spa":2}' crossorigin="anonymous"></script>
