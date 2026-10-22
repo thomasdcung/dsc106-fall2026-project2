@@ -71,16 +71,12 @@ For each visualization, the report lists 3-5 central design decisions, each scor
 
 ## Deployment
 
-The report is deployed with GitHub Pages at: *public URL here*
+The report is deployed with GitHub Pages at: *[public URL here](https://thomasdcung.github.io/dsc106-fall2026-project2/)*
 
 ## Timeline
 
 - **Checkpoint:** Wed 10/14, 11:59 PM (Gradescope PDF)
 - **Final submission:** Wed 10/21, 11:59 PM (public HTML report)
-
-## Tools
-
-*List the tools used, e.g. Python, Altair, D3, Observable, Tableau.*
 
 ## Acknowledgements
 
